@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.PayFragment">
+
+    <TextView
+        android:id="@+id/tv_pay_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:letterSpacing="0.15"
+        android:text="@string/productInCart"
+        android:textColor="#3f3a3a"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pay_recipient_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:letterSpacing="0.15"
+        android:text="@string/recipientInformation"
+        android:textColor="#3f3a3a"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_pay_product"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pay_separator_up" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv-pay_product_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pay_separator_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pay_product" />
+
+    <ImageView
+        android:id="@+id/iv_pay_separator_up"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="552dp"
+        android:background="#cccccc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pay_product" />
+
+    <EditText
+        android:id="@+id/et_pay_recipient_name"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#f5f5f5"
+        android:ems="10"
+        android:hint="@string/recipientName"
+        android:inputType="textPersonName"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_pay_recipient_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pay_recipient_info" />
+
+    <EditText
+        android:id="@+id/et_pay_recipient_email"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="#f5f5f5"
+        android:ems="10"
+        android:hint="@string/recipientEmailInput"
+        android:inputType="textEmailAddress"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_pay_recipient_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_pay_recipient_name" />
+
+    <EditText
+        android:id="@+id/et_pay_recipient_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="#f5f5f5"
+        android:ems="10"
+        android:hint="@string/recipientPhoneNumberInput"
+        android:inputType="phone"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_pay_recipient_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_pay_recipient_email" />
+
+    <TextView
+        android:id="@+id/tv_pay_phone_number_example"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:letterSpacing="0.15"
+        android:text="@string/PhoneNumberExample"
+        android:textColor="#646464"
+        app:layout_constraintStart_toStartOf="@+id/et_pay_recipient_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/et_pay_recipient_phone_number" />
+
+    <EditText
+        android:id="@+id/et_pay_recipient_address"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:background="#f5f5f5"
+        android:ems="10"
+        android:hint="@string/recipientAddress"
+        android:inputType="textPostalAddress"
+        android:textColor="#3f3a3a"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_pay_recipient_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pay_phone_number_example" />
+
+    <TextView
+        android:id="@+id/tv_pay_arrive_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:letterSpacing="0.15"
+        android:text="@string/arriveTimeSelection"
+        android:textColor="#646464"
+        app:layout_constraintStart_toStartOf="@+id/et_pay_recipient_address"
+        app:layout_constraintTop_toBottomOf="@+id/et_pay_recipient_address" />
+
+    <ImageView
+        android:id="@+id/iv_pay_separator_down"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="#cccccc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_arrive_time" />
+
+    <RadioGroup
+        android:id="@+id/rg_arrive_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/tv_pay_arrive_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pay_arrive_time">
+
+        <RadioButton
+            android:id="@+id/rbtn_arrive_time_morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:letterSpacing="0.15"
+            android:paddingLeft="25dp"
+            android:text="@string/arriveTimeMoring"
+            android:textColor="#646464"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="1137dp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_arrive_time_afternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:letterSpacing="0.15"
+            android:paddingLeft="25dp"
+            android:text="@string/arriveTimeAfternoon"
+            android:textColor="#646464"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="1137dp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_arrive_time_anytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:letterSpacing="0.15"
+            android:paddingLeft="25dp"
+            android:text="@string/arriveTimeAnytime"
+            android:textColor="#646464"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="1137dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_pay_choose_payment_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:letterSpacing="0.15"
+        android:text="@string/choosePaymentMethod"
+        android:textColor="#3f3a3a"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_pay_arrive_time"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pay_separator_down" />
+
+    <Spinner
+        android:id="@+id/sp_pay_payment_list"
+        android:layout_width="691dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="#f5f5f5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pay_choose_payment_method" />
+
+</android.support.constraint.ConstraintLayout>

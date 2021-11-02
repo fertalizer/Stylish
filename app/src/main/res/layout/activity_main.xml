@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btv_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_toolbar_home">
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_toolbar_home"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#ffffff"
+
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="18dp"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/frame_container"
+        app:layout_constraintEnd_toEndOf="@+id/tb_toolbar_home"
+        app:layout_constraintStart_toStartOf="@+id/tb_toolbar_home"
+        app:srcCompat="@mipmap/image_logo02" />
+
+    <ImageView
+        android:id="@+id/iv_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/frame_container"
+        app:layout_constraintEnd_toEndOf="@+id/tb_toolbar_home"
+        app:layout_constraintStart_toStartOf="@+id/tb_toolbar_home"
+        app:srcCompat="@mipmap/icons_24px_drawer" />
+
+    <TextView
+        android:id="@+id/tv_catalog"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/catalogTitle"
+        android:textAlignment="center"
+        android:textColor="#3f3a3a"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/frame_container"
+        app:layout_constraintEnd_toEndOf="@+id/tb_toolbar_home"
+        app:layout_constraintStart_toStartOf="@+id/tb_toolbar_home" />
+
+    <TextView
+        android:id="@+id/tv_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/cartTitle"
+        android:textAlignment="center"
+        android:textColor="#3a3f3f"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/frame_container"
+        app:layout_constraintEnd_toEndOf="@+id/tb_toolbar_home"
+        app:layout_constraintStart_toStartOf="@+id/tb_toolbar_home" />
+
+    <TextView
+        android:id="@+id/tv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="157.5dp"
+        android:layout_marginEnd="156.5dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/profileTitle"
+        android:textAlignment="center"
+        android:textColor="#3a3f3f"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/frame_container"
+        app:layout_constraintEnd_toEndOf="@+id/tb_toolbar_home"
+        app:layout_constraintStart_toStartOf="@+id/tb_toolbar_home" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/btv_navigation"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#ffffff"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconSize="36dp"
+        app:itemIconTint="@drawable/color_selector"
+        app:labelVisibilityMode="unlabeled">
+
+    </android.support.design.widget.BottomNavigationView>
+
+
+</android.support.constraint.ConstraintLayout>

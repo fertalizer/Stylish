@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_dialog_product_size"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="#f0f0f0"
+        android:gravity="center"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="XS" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_product_size_select"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_detail_size_stoke"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dialog_product_size"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dialog_product_size"
+        app:layout_constraintStart_toStartOf="@+id/tv_dialog_product_size"
+        app:layout_constraintTop_toTopOf="@+id/tv_dialog_product_size" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_product_size_strike_through"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_dialog_product_size_select"
+        app:layout_constraintEnd_toEndOf="@+id/iv_dialog_product_size_select"
+        app:layout_constraintStart_toStartOf="@+id/iv_dialog_product_size_select"
+        app:layout_constraintTop_toTopOf="@+id/iv_dialog_product_size_select"
+        app:srcCompat="@drawable/image_strikethrough" />
+</android.support.constraint.ConstraintLayout>

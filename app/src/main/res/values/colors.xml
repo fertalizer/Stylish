@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorDetailDialogOpacity40">#663f3a3a</color>
+    <color name="colorDetailDialogOpacity100">#3f3a3a</color>
+    <color name="colorDetailDialogLockAddToCart">#999999</color>
+    <color name="colorDetailDialogUnlockAddToCart">#3f3a3a</color>
+    <color name="white">#ffffff</color>
+    <color name="orange_8b572a">#8b572a</color>
+</resources>

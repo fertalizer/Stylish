@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="payment_list">
+        <item>@string/payOnDelivery</item>
+        <item>@string/cardPayment</item>
+    </string-array>
+</resources>

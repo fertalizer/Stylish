@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_dialog_product_rectangular_down"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_product_detail_number_input" />
+
+    <TextView
+        android:id="@+id/tv_dialog_product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="厚實毛呢格子外套" />
+
+    <TextView
+        android:id="@+id/tv_dialog_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_dialog_product_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_product_title"
+        tools:text="NT$2140" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_product_close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_black_24dp" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_product_rectangular_up"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_product_price" />
+
+    <TextView
+        android:id="@+id/tv_dialog_product_color_select"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:letterSpacing="0.15"
+        android:text="@string/productDetailColorSelect"
+        android:textColor="#646464"
+        app:layout_constraintStart_toStartOf="@+id/tv_dialog_product_title"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dialog_product_rectangular_up"
+        tools:text="選擇顏色" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_dialog_product_color_list"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_dialog_product_color_select"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_product_color_select" />
+
+    <TextView
+        android:id="@+id/tv_dialog_product_size_select"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="0.15"
+        android:text="@string/productDetailSizeSelect"
+        android:textColor="#646464"
+        app:layout_constraintStart_toStartOf="@+id/rv_dialog_product_color_list"
+        app:layout_constraintTop_toBottomOf="@+id/rv_dialog_product_color_list"
+        tools:text="選擇尺寸" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_dialog_product_size_list"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_dialog_product_size_select"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_product_size_select" />
+
+    <TextView
+        android:id="@+id/tv_dialog_product_amount_select"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/productDetailQuantitySelect"
+        android:textColor="#646464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_dialog_product_size_list"
+        tools:text="選擇數量" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_product_subtract_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/subtract_button_background_opacity_40"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="@+id/tv_dialog_product_amount_select"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_product_amount_select"
+        app:srcCompat="@drawable/ic_sub_new" />
+
+    <EditText
+        android:id="@+id/et_product_detail_number_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/edit_text_background_opacity_40"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_dialog_product_subtract_button"
+        app:layout_constraintEnd_toStartOf="@+id/iv_dialog_product_add_button"
+        app:layout_constraintStart_toEndOf="@+id/iv_dialog_product_subtract_button"
+        app:layout_constraintTop_toTopOf="@+id/iv_dialog_product_subtract_button" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_product_add_button"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/add_button_background_opacity_40"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_dialog_product_subtract_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_dialog_product_subtract_button"
+        app:srcCompat="@drawable/ic_add_new" />
+
+    <TextView
+        android:id="@+id/btn_dialog_add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#999999"
+        android:gravity="center"
+        android:text="@string/AddIntoCart"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dialog_product_rectangular_down" />
+
+    <TextView
+        android:id="@+id/tv_dialog_product_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:letterSpacing="0.15"
+        android:textAlignment="textEnd"
+        android:textColor="#646464"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/iv_dialog_product_add_button"
+        app:layout_constraintTop_toTopOf="@+id/tv_dialog_product_amount_select"
+        tools:text="庫存：24" />
+
+    <TextView
+        android:id="@+id/tv_dialog_product_error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:letterSpacing="0.15"
+        android:text="@string/productDetailErrorMessage"
+        android:textColor="#d0021b"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/tv_dialog_product_amount_select"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dialog_product_subtract_button"
+        tools:text="庫存不足" />
+</android.support.constraint.ConstraintLayout>

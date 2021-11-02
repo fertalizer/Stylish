@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/iv_cart_product_main_image"
+        android:layout_width="82dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="262dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_placeholder" />
+
+    <TextView
+        android:id="@+id/tv_cart_product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_cart_product_main_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_cart_product_main_image"
+        tools:text="厚實毛呢格子外套" />
+
+    <ImageView
+        android:id="@+id/iv_cart_product_color"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_product_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_product_title" />
+
+    <ImageView
+        android:id="@+id/iv_cart_separator"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#cccccc"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cart_product_color"
+        app:layout_constraintStart_toEndOf="@+id/iv_cart_product_color"
+        app:layout_constraintTop_toTopOf="@+id/iv_cart_product_color" />
+
+    <ImageView
+        android:id="@+id/iv_cart_subtract_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/subtract_button_background_opacity_40"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cart_product_main_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_cart_product_color"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cart_product_color"
+        app:srcCompat="@drawable/ic_sub_new" />
+
+    <TextView
+        android:id="@+id/tv_cart_purchase_number"
+        android:layout_width="86dp"
+        android:layout_height="0dp"
+        android:background="@drawable/edit_text_background_opacity_100"
+        android:gravity="center"
+        android:letterSpacing="0.15"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cart_subtract_button"
+        app:layout_constraintStart_toEndOf="@+id/iv_cart_subtract_button"
+        app:layout_constraintTop_toTopOf="@+id/iv_cart_subtract_button"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/iv_cart_add_button"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:background="@drawable/add_button_background_opacity_100"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cart_subtract_button"
+        app:layout_constraintStart_toEndOf="@+id/tv_cart_purchase_number"
+        app:layout_constraintTop_toTopOf="@+id/iv_cart_subtract_button"
+        app:srcCompat="@drawable/ic_add_new" />
+
+    <TextView
+        android:id="@+id/tv_cart_product_size"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:textColor="#3f3a3a"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cart_product_color"
+        app:layout_constraintStart_toEndOf="@+id/iv_cart_separator"
+        app:layout_constraintTop_toTopOf="@+id/iv_cart_product_color"
+        tools:text="M" />
+
+    <TextView
+        android:id="@+id/tv_cart_remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginEnd="16dp"
+        android:letterSpacing="0.15"
+        android:text="@string/cartRemove"
+        android:textColor="#888888"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_cart_product_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_cart_product_main_image"
+        app:layout_constraintTop_toTopOf="@+id/tv_cart_product_title" />
+
+    <TextView
+        android:id="@+id/tv_cart_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:letterSpacing="0.15"
+        android:textColor="#3f3a3a"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_cart_remove_button"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_remove_button"
+        tools:text="NT$2140" />
+</android.support.constraint.ConstraintLayout>
